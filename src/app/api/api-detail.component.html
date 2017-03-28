@@ -1,6 +1,54 @@
+<h2>Api Details</h2>
+<hr/>
 <div class="well">
+   <div *ngIf="api">
+         <!--<label>Id: </label>{{api.id}}-->
+         <div class="form-group">
+            <label for="apiName">Name</label>
+            <input type="input" class="form-control" id="apiName" placeholder="Enter Name" [(ngModel)]='api.name'>
+         </div>
+         <div class="form-group">
+            <label for="apiDescription">Description</label>
+            <textarea class="form-control" id="apiDescription" rows="3" placeholder="Enter Description" [(ngModel)]='api.description'></textarea>
+         </div>
+         <div class="form-group">
+            <label for="apiUrl">Url</label>
+            <input type="input" class="form-control" id="apiUrl" placeholder="Provide Url" [(ngModel)]='api.url'>
+         </div>
+         <div class="form-group">
+            <label>Last Run Date: {{api.lastRunDate}}</label><br/>
+            <label>Last Run Result: {{api.lastRunResult}}</label>
+         </div>
+         <button type="submit" class="btn btn-info">Cancel</button>
+         <button type="submit" class="btn btn-success">Save</button>
+
+   </div>
+</div>
+
+
+
+<!--<div class="well">
+    Id : {{api.Id}}
     <a id='apinameLink' href='{{api.url}}'>{{api.name}}</a>
     <p>
         {{api.description}}
     <p>
-<div>
+</div>
+
+    <h2>{{api.name}} details!</h2>
+            <div>
+                <label>Id: </label>{{api.id}}</div>
+            <div>
+                <label>Name: </label>
+                <input [(ngModel)]="api.name" placeholder="Name" />
+            </div>
+            <div>
+                <label>Description: </label>
+                <input [(ngModel)]="api.description" placeholder="Description" />
+            </div>
+            <div>
+                <label>Url: </label>
+                <input [(ngModel)]="api.url" placeholder="Url" />
+            </div>
+            <button (click)="goBack()">Back</button>
+            <button (click)="save()">Save</button>-->

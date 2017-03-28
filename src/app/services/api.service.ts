@@ -12,4 +12,8 @@ export class ApiService{
     getTopApis() : Api[]{
         return apidummydata;
     }
+
+    getApiById(id: number) : Api{
+        return apidummydata[0];
+    }
 }

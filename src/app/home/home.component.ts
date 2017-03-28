@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ApiService } from "../services/api.service";
+import { Api } from "../models/api";
 
 @Component({
     selector: 'app-home',
@@ -12,22 +13,17 @@ export class HomeComponent implements OnInit {
     totalSuccededApiCount: number;
     totalFailedApiCount: number;
     runApiLink: string;
-    
-    constructor(private apiService: ApiService){
-        
-    }
+    apiList: Api[];
+
+    constructor(private apiService: ApiService){ }
 
     ngOnInit(): void {
-        this.LoadStartupData();
-    }
+        this.apiList = this.apiService.getApis();
 
-    LoadStartupData(){
-        var apiList = this.apiService.getApis();
-
-        this.totalApiCount = apiList.length;
-        this.lastRunDate = apiList[0].lastRunDate;
-        this.totalSuccededApiCount = 8;
-        this.totalFailedApiCount = 2;
+        this.totalApiCount = this.apiList.length;
+        this.lastRunDate = this.apiList[0].lastRunDate;
+        this.totalSuccededApiCount = 1;
+        this.totalFailedApiCount = 1;
         this.runApiLink = '/apidirectory';
     }
 }

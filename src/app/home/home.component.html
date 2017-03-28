@@ -9,7 +9,15 @@
         <label>Click <a href='{{runApiLink}}'>here</a> to Check again</label>
     </div>
 
-    <h2>Top Apis</h2>
+    <h2>TOP Apis</h2>
     <hr/>
-    <app-api-list></app-api-list>
+    <div class='row'>
+        <div style='margin-right:15px;text-align: center;' class='col-md-3 well' *ngFor='let apid of apiList'>
+            <h3>
+                <a href='{{"/apis/" + apid.id}}'>
+                    {{apid.name}}
+                </a>
+            </h3>
+        </div>
+    </div>
 </div>

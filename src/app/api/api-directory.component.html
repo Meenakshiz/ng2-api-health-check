@@ -15,6 +15,7 @@
   <table class="table table-bordered">
     <thead>
       <tr>
+        <th>Id</th>
         <th>Name</th>
         <th>Description</th>
         <th>Url</th>
@@ -24,13 +25,22 @@
       </tr>
     </thead>
     <tbody>
-        <tr *ngFor='let api of apiDirectory' >
+        <tr *ngFor='let api of apiDirectory'>
+            <td>{{api.id}}</td>
             <td>{{api.name}}</td>
             <td>{{api.description}}</td>
             <td>{{api.url}}</td>
-            <td>{{api.url}}</td>
-            <td>{{api.url}}</td>
+            <td>{{api.lastRunDate}}</td>
+            <td>{{api.lastRunResult}}</td>
+            <td>
+                <button class="run">Run</button>
+                <button class="edit">Edit</button>
+                <button class="delete">Delete</button>
+            </td>
         </tr>
     </tbody>
   </table>
+  <!--To be removed-->
+  <app-api-detail></app-api-detail>
 </div>
+

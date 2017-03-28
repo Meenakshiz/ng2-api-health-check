@@ -1,4 +1,5 @@
 import { NgModule }      from '@angular/core';
+import { FormsModule }      from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -11,7 +12,7 @@ import { AddApiComponent } from "./api/add-api.component";
 import { ApiListComponent } from "./api/api-list.component";
 
 @NgModule({
-  imports:      [ BrowserModule ],
+  imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, HomeComponent, NavComponent, ApiDirectoryComponent, ApiListComponent, ApiDetailComponent, AddApiComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ ApiService ]
