@@ -5,11 +5,10 @@
         <label>Total Api's:</label> {{totalApiCount}}<br/>
         <label>Successful Api's:</label> {{totalSuccededApiCount}}<br/>
         <label>Failed Api's:</label> {{totalFailedApiCount}}<br/>
-        <label>Last Run Date:</label> {{lastRunDate}}<br/><br/>
-        <label>Click <a href='{{runApiLink}}'>here</a> to Check again</label>
+        <label>Last Run Date:</label> {{lastRunDate.toLocaleString()}}<br/><br/>
+        <label>Click <a href='{{runApiLink}}'>here</a> to run api health check</label>
     </div>
-
-    <h2>TOP Apis</h2>
+    <h2>Top Apis</h2>
     <hr/>
     <div class='row'>
         <div style='margin-right:15px;text-align: center;' class='col-md-3 well' *ngFor='let apid of apiList'>

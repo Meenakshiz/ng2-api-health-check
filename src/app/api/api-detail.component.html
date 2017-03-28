@@ -1,30 +1,30 @@
-<h2>Api Details</h2>
-<hr/>
-<div class="well">
-   <div *ngIf="api">
-         <!--<label>Id: </label>{{api.id}}-->
-         <div class="form-group">
-            <label for="apiName">Name</label>
-            <input type="input" class="form-control" id="apiName" placeholder="Enter Name" [(ngModel)]='api.name'>
-         </div>
-         <div class="form-group">
-            <label for="apiDescription">Description</label>
-            <textarea class="form-control" id="apiDescription" rows="3" placeholder="Enter Description" [(ngModel)]='api.description'></textarea>
-         </div>
-         <div class="form-group">
-            <label for="apiUrl">Url</label>
-            <input type="input" class="form-control" id="apiUrl" placeholder="Provide Url" [(ngModel)]='api.url'>
-         </div>
-         <div class="form-group">
-            <label>Last Run Date: {{api.lastRunDate}}</label><br/>
-            <label>Last Run Result: {{api.lastRunResult}}</label>
-         </div>
-         <button type="submit" class="btn btn-info">Cancel</button>
-         <button type="submit" class="btn btn-success">Save</button>
-
-   </div>
+<div class="container">
+    <h2>Api Details</h2>
+    <hr/>
+    <div class="well">
+        <div *ngIf="api">
+                <!--<label>Id: </label>{{api.id}}-->
+                <div class="form-group">
+                    <label for="apiName">Name</label>
+                    <input type="input" class="form-control" id="apiName" placeholder="Enter Name" [(ngModel)]='api.name'>
+                </div>
+                <div class="form-group">
+                    <label for="apiDescription">Description</label>
+                    <textarea class="form-control" id="apiDescription" rows="3" placeholder="Enter Description" [(ngModel)]='api.description'></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="apiUrl">Url</label>
+                    <input type="input" class="form-control" id="apiUrl" placeholder="Provide Url" [(ngModel)]='api.url'>
+                </div>
+                <div class="form-group">
+                    <label>Last Run Date: {{api.lastRunDate}}</label><br/>
+                    <label>Last Run Result: {{api.lastRunResult}}</label>
+                </div>
+                <button class="btn btn-info">Go Back</button>
+                <button class="btn btn-success">Save</button>
+        </div>
+    </div>
 </div>
-
 
 
 <!--<div class="well">

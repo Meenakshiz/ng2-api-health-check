@@ -24,6 +24,6 @@ export class HomeComponent implements OnInit {
         this.lastRunDate = this.apiList[0].lastRunDate;
         this.totalSuccededApiCount = 1;
         this.totalFailedApiCount = 1;
-        this.runApiLink = '/apidirectory';
+        this.runApiLink = '/apis';
     }
 }

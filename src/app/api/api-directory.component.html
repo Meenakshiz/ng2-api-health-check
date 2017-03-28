@@ -14,11 +14,10 @@
   <hr/>     
   <table class="table table-bordered">
     <thead>
-      <tr>
+      <tr style='background-color:lightblue;'>
         <th>Id</th>
         <th>Name</th>
         <th>Description</th>
-        <th>Url</th>
         <th>Last Run Date</th>
         <th>Last Run Result</th>
         <th>Action</th>
@@ -27,20 +26,19 @@
     <tbody>
         <tr *ngFor='let api of apiDirectory'>
             <td>{{api.id}}</td>
-            <td>{{api.name}}</td>
+            <td>
+                <a href="{{api.url}}">{{api.name}}</a>
+            </td>
             <td>{{api.description}}</td>
-            <td>{{api.url}}</td>
-            <td>{{api.lastRunDate}}</td>
+            <td>{{api.lastRunDate.toLocaleString()}}</td>
             <td>{{api.lastRunResult}}</td>
             <td>
-                <button class="run">Run</button>
-                <button class="edit">Edit</button>
-                <button class="delete">Delete</button>
+                <button class="btn btn-success">Run</button>
+                <button class="btn btn-info">Edit</button>
+                <button class="btn btn-danger">Delete</button>
             </td>
         </tr>
     </tbody>
   </table>
-  <!--To be removed-->
-  <app-api-detail></app-api-detail>
 </div>
 

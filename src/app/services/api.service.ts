@@ -14,6 +14,6 @@ export class ApiService{
     }
 
     getApiById(id: number) : Api{
-        return apidummydata[0];
+        return apidummydata.find(x => x.id == id);
     }
 }
