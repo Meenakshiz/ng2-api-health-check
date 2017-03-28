@@ -1,4 +1,6 @@
-<div class='container'>
+<div class="container">
+    <h2>Api Summary</h2>
+    <hr/>
     <div class='well bs-callout bs-callout-info'>
         <label>Total Api's:</label> {{totalApiCount}}<br/>
         <label>Successful Api's:</label> {{totalSuccededApiCount}}<br/>
@@ -6,5 +8,8 @@
         <label>Last Run Date:</label> {{lastRunDate}}<br/><br/>
         <label>Click <a href='{{runApiLink}}'>here</a> to Check again</label>
     </div>
-</div>
 
+    <h2>Top Apis</h2>
+    <hr/>
+    <app-api-list></app-api-list>
+</div>

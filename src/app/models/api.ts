@@ -3,4 +3,6 @@ export class Api{
     name: string;
     description: string;
     url: string;
+    lastRunDate: Date;
+    lastRunResult: string;
 }

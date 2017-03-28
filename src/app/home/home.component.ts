@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ApiService } from "../services/api.service";
+
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html'
@@ -10,8 +12,8 @@ export class HomeComponent implements OnInit {
     totalSuccededApiCount: number;
     totalFailedApiCount: number;
     runApiLink: string;
-
-    constructor(){
+    
+    constructor(private apiService: ApiService){
         
     }
 
@@ -20,8 +22,10 @@ export class HomeComponent implements OnInit {
     }
 
     LoadStartupData(){
-        this.totalApiCount = 10;
-        this.lastRunDate = new Date();
+        var apiList = this.apiService.getApis();
+
+        this.totalApiCount = apiList.length;
+        this.lastRunDate = apiList[0].lastRunDate;
         this.totalSuccededApiCount = 8;
         this.totalFailedApiCount = 2;
         this.runApiLink = '/apidirectory';

@@ -8,10 +8,11 @@ import { ApiDirectoryComponent } from "./api/api-directory.component";
 import { ApiDetailComponent } from "./api/api-detail.component";
 import { ApiService } from "./services/api.service";
 import { AddApiComponent } from "./api/add-api.component";
+import { ApiListComponent } from "./api/api-list.component";
 
 @NgModule({
   imports:      [ BrowserModule ],
-  declarations: [ AppComponent, HomeComponent, NavComponent, ApiDirectoryComponent, ApiDetailComponent, AddApiComponent ],
+  declarations: [ AppComponent, HomeComponent, NavComponent, ApiDirectoryComponent, ApiListComponent, ApiDetailComponent, AddApiComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ ApiService ]
 })
