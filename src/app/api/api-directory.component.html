@@ -1,0 +1,35 @@
+
+<div class='container'>
+    <h1>Api Directory</h1>
+    <hr/>
+    <div class='row'>
+        <div class='col-md-3' *ngFor='let apid of apiDirectory' >
+            <app-api-detail [api]='apid'></app-api-detail>
+        </div>
+    </div>    
+</div>
+
+<!--<div class="container">
+  <h2>Api Directory</h2>       
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Url</th>
+        <th>Last Run Date</th>
+        <th>Last Run Result</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let api of apiDirectory' >
+            <td>{{api.name}}</td>
+            <td>{{api.description}}</td>
+            <td>{{api.url}}</td>
+            <td>{{api.url}}</td>
+            <td>{{api.url}}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>-->
